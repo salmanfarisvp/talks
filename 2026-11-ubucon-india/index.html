@@ -101,8 +101,8 @@ table.cmp th.hl{background:var(--o);color:#fff}
 table.cmp td{background:var(--soft);border-radius:12px;padding:13px 12px;text-align:center;color:#444}
 table.cmp td:first-child{background:none;text-align:right;font-weight:700;color:var(--ink);width:160px}
 table.cmp td.hl{background:#FFEDE5;border:3px solid var(--o);color:var(--ink);font-weight:700}
-ol.tips{list-style:none;padding:0;counter-reset:t;display:grid;gap:28px}
-ol.tips li{counter-increment:t;display:flex;align-items:center;gap:28px;background:var(--soft);border-radius:22px;padding:30px 36px;font-size:44px;margin:0}
+ol.tips{list-style:none;padding:0;counter-reset:t;display:grid;gap:18px}
+ol.tips li{counter-increment:t;display:flex;align-items:center;gap:28px;background:var(--soft);border-radius:22px;padding:16px 36px;font-size:40px;margin:0}.tips li div{display:flex;flex-direction:column;gap:6px}.tips li b{font-weight:700}.tips li small{font-size:28px;color:var(--mut)}.tips li small code{font-size:.9em}
 ol.tips li::before{content:counter(t);flex:none;width:64px;height:64px;border-radius:50%;background:var(--o);color:#fff;font-weight:700;display:flex;align-items:center;justify-content:center}
 /* dark / split */
 .reveal section.dark{background:radial-gradient(120% 120% at 80% 100%,#7b3fbf 0%,#2c001e 55%,#14000e 100%);color:#fff}
@@ -180,7 +180,7 @@ body.on-dark #brandbar .dk{display:none} body:not(.on-dark) #brandbar .wt{displa
     <li>Electronics, edge computing, IoT</li>
   </ul>
 </div>
-<aside class="notes"><p><b>0:45</b></p><ul><li>Screenly: secure digital signage, built on Ubuntu Core</li><li>Started in 2012 on the very first Raspberry Pi</li><li>Anthias (formerly Screenly OSE): most popular open source signage project on GitHub</li><li>On Ubuntu Core since 2016, back when it was called Snappy: one of the earliest customers</li></ul></aside>
+<aside class="notes"><p><b>0:45</b></p><ul><li>Me: maker and open source contributor; electronics, edge computing, IoT</li><li>Screenly: secure digital signage, built on Ubuntu Core</li><li>Started in 2012 on the very first Raspberry Pi</li><li>Anthias (formerly Screenly OSE): most popular open source signage project on GitHub</li><li>On Ubuntu Core since 2016, back when it was called Snappy: one of the earliest customers</li></ul></aside>
 </section>
 
 <!-- 2b WHAT IS DIGITAL SIGNAGE -->
@@ -206,7 +206,7 @@ body.on-dark #brandbar .dk{display:none} body:not(.on-dark) #brandbar .wt{displa
 <section class="dark big">
 <div class="number">10,000<span>+</span></div>
 <p class="lead">Screenly players run Ubuntu Core today.<br>On board since 2016, one of the earliest adopters.</p>
-<aside class="notes"><p><b>1:30</b></p><ul><li>2012: a Pi project people flashed onto SD cards at home</li><li>May 2016: we bet the product on Ubuntu Core, before Core 16 even shipped</li><li>Today: about 10,000 players in boardrooms, hospitals, shops and bus stops</li><li>No SSH, no engineers sent out when an update goes wrong</li><li>They update themselves and roll back on their own</li><li>That's the gap: a Pi that works on your desk vs one you can ship ten thousand times</li></ul></aside>
+<aside class="notes"><p><b>1:30</b></p><ul><li>About 10,000 Screenly players run Ubuntu Core today: boardrooms, hospitals, shops, bus stops</li><li>We bet the product on it in May 2016, before Core 16 even shipped</li><li>No SSH, no engineers sent out when an update goes wrong</li><li>They update themselves and roll back on their own</li><li>That's the gap: a Pi that works on your desk vs one you can ship ten thousand times</li></ul></aside>
 </section>
 
 <!-- 4 PETS TO CATTLE -->
@@ -228,7 +228,7 @@ body.on-dark #brandbar .dk{display:none} body:not(.on-dark) #brandbar .wt{displa
   <b>Screenly, 2013:</b> Puppet on ~10,000 Pis &nbsp;·&nbsp; <b>10-minute runs:</b> pull the plug, brick a screen
   <div class="lesson">Lesson: build the OS for cattle</div>
 </div>
-<aside class="notes"><p><b>1:30</b></p><ul><li>Pets vs cattle comes from the cloud world; our Pi projects all start as pets</li><li>Screenly, 2013: about 10,000 players managed with Puppet</li><li>Each run took around 10 minutes on a Pi</li><li>Power pulled mid kernel upgrade = bricked screen, often inside a ceiling</li><li>We spent more time on recovery tooling than on the product</li><li>Lesson: the OS itself has to treat devices as cattle</li><li>Source if asked: Viktor Petersson, <i>Five years of Ubuntu Core</i> (Ubuntu Summit 2022) and <i>From Pets to Cattle</i></li></ul></aside>
+<aside class="notes"><p><b>1:30</b></p><ul><li>Pets vs cattle comes from the cloud world; our Pi projects all start as pets</li><li>Screenly, 2013: about 10,000 players managed with Puppet</li><li>Each run took around 10 minutes on a Pi</li><li>Power pulled mid kernel upgrade = bricked screen, often inside a ceiling</li><li>We spent more time on recovery tooling than on the product</li><li>Lesson: the OS itself has to treat devices as cattle</li></ul></aside>
 </section>
 
 <!-- 5 UBUNTU CORE IN ONE PICTURE -->
@@ -249,7 +249,7 @@ body.on-dark #brandbar .dk{display:none} body:not(.on-dark) #brandbar .wt{displa
     <li class="fragment"><b>Apps are confined</b><span>hardware only through interfaces</span></li>
   </ol>
 </div>
-<aside class="notes"><p><b>2:00</b></p><ul><li>Walk the stack bottom up: Pi, kernel + gadget snaps, read-only core24 base, snapd, app snaps</li><li>Pi OS: you configure a machine. Ubuntu Core: you declare a product and every device is a copy</li><li>If asked about models: inside the app snap or as their own snap, same signed updates and rollback</li><li>Screenly's 2016 checklist: small footprint, transactional updates, signing, auto rollback, isolation, fast boot, images built in CI</li><li>Snappy beat balena and Yocto; boot time was the one weak spot</li></ul></aside>
+<aside class="notes"><p><b>2:00</b></p><ul><li>Walk the stack bottom up: Pi, kernel + gadget snaps, read-only core24 base, snapd, app snaps</li><li>Then click through the four steps:</li><li>1. Flash Ubuntu Core 24 with Raspberry Pi Imager and boot</li><li>2. Everything is a signed snap: kernel, gadget, base and apps</li><li>3. Updates are all or nothing; a failed one rolls back by itself</li><li>4. Apps are confined and reach hardware only through interfaces</li><li>Takeaway: on Pi OS you configure a machine; on Ubuntu Core you declare a product and every device is a copy</li><li>If asked about models: inside the app snap or as their own snap, same signed updates and rollback</li><li>If asked why Snappy in 2016: it beat balena and Yocto on Screenly's checklist; boot time was the one weak spot</li></ul></aside>
 </section>
 
 <!-- 6 COMPARISON -->
@@ -258,15 +258,15 @@ body.on-dark #brandbar .dk{display:none} body:not(.on-dark) #brandbar .wt{displa
 <table class="cmp">
 <tr><th></th><th>Raspberry Pi OS</th><th>Yocto / Buildroot</th><th>balenaOS</th><th class="hl">Ubuntu Core</th></tr>
 <tr><td>What it is</td><td>General-purpose Debian</td><td>Build-your-own Linux</td><td>Container OS (Yocto-based)</td><td class="hl">Immutable, snap-based Ubuntu</td></tr>
-<tr><td>Apps</td><td>apt packages</td><td>Whatever you build in</td><td>Docker containers</td><td class="hl">Snaps (Docker as a snap)</td></tr>
+<tr><td>Apps</td><td>apt packages</td><td>Whatever you build in</td><td>Docker-compatible containers</td><td class="hl">Snaps (Docker as a snap)</td></tr>
 <tr><td>OS updates</td><td>In place, no rollback</td><td>Add Mender / RAUC / SWUpdate</td><td>Host OS updates, rollback</td><td class="hl">Transactional, auto rollback</td></tr>
 <tr><td>App isolation</td><td>None by default</td><td>DIY</td><td>Containers</td><td class="hl">Strict confinement + interfaces</td></tr>
-<tr><td>Fleet tools</td><td>DIY (Ansible, Puppet)</td><td>DIY or Mender server</td><td>balenaCloud / openBalena</td><td class="hl">Snap Store, Landscape</td></tr>
-<tr><td>Support</td><td>Follows Debian</td><td>You maintain it</td><td>Vendor releases</td><td class="hl">10+ yrs (Core 26: up to 15)</td></tr>
+<tr><td>Fleet tools</td><td>DIY (Ansible, Puppet)</td><td>DIY, Mender or hawkBit</td><td>balenaCloud / openBalena</td><td class="hl">Snap Store, Landscape</td></tr>
+<tr><td>Support</td><td>Follows Debian releases</td><td>You maintain it; LTS up to 4 yrs</td><td>Rolling; ESR lines 9 months</td><td class="hl">10 yrs; 15 with Ubuntu Pro</td></tr>
 <tr><td>Best for</td><td>Prototypes</td><td>Custom hardware, tiny images</td><td>Container-first teams</td><td class="hl">Fleets that self-heal for years</td></tr>
 </table>
-<p class="foot">U-Boot is a bootloader several of these use, not an OS choice. Screenly shortlisted Snappy, balena and Yocto in 2016.</p>
-<aside class="notes"><p><b>1:00</b></p><ul><li>Keep it fair: every option has its place</li><li>Pi OS: great on the desk, but no rollback (the Puppet-era pain)</li><li>Yocto / Buildroot: smallest image, but you own the OS, the OTA and every patch</li><li>balenaOS: strong for Docker-first teams</li><li>Ubuntu Core: when devices must update themselves safely for a decade</li></ul></aside>
+<p class="foot">Screenly shortlisted Snappy, balena and Yocto in 2016.</p>
+<aside class="notes"><p><b>1:00</b></p><ul><li>Keep it fair: every option has its place</li><li>Pi OS: great on the desk, but no rollback (the Puppet-era pain)</li><li>Yocto / Buildroot: smallest image, but you own the OS, the OTA and every patch</li><li>balenaOS: strong for container-first teams; A/B host OS updates with rollback too</li><li>Ubuntu Core: when devices must update themselves safely for a decade</li><li>Support row: Ubuntu Core 10 years standard, 15 with the Ubuntu Pro Legacy add-on</li></ul></aside>
 </section>
 
 <!-- 7 HARDWARE -->
@@ -280,7 +280,7 @@ body.on-dark #brandbar .dk{display:none} body:not(.on-dark) #brandbar .wt{displa
   <div class="card soft"><h3>🌡️ Heat</h3><p>Screens live in hot ceilings and kiosks. Use a heatsink or cooler.</p></div>
   <div class="card soft"><h3>🔐 Know the limits</h3><p>No TPM on the Pi; RTC needs a battery. High security: x86 + TPM.</p></div>
 </div>
-<aside class="notes"><p><b>1:00</b></p><ul><li>Cattle need the right hardware</li><li>Screenly ships SanDisk Industrial SD cards: players write 24/7, consumer cards can die in months</li><li>One site visit costs more than the card</li><li>Plan to replace cards every 2 to 3 years</li><li>Card died? Reflash, re-pair, content comes back: state lives in the cloud</li><li>Sources: Screenly SD card docs; Viktor Petersson, State of Open Con 2024</li></ul></aside>
+<aside class="notes"><p><b>1:00</b></p><ul><li>Cattle need the right hardware; storage fails first</li><li>Screenly ships SanDisk Industrial SD cards: players write 24/7, consumer cards can die in months</li><li>Even good cards last 2 to 3 years, so plan replacements; one site visit costs more than the card</li><li>Better: Pi 5 with an NVMe HAT, or eMMC on a Compute Module</li><li>Official 27 W supply on the Pi 5; brownouts corrupt storage</li><li>Ceilings and kiosks get hot: heatsink or active cooler</li><li>No TPM, RTC needs a battery: for high security, go x86 with a TPM</li><li>Card died anyway? Reflash, re-pair, content comes back because state lives in the cloud</li></ul></aside>
 </section>
 
 <!-- 8 HARDWARE ACCESS -->
@@ -314,7 +314,7 @@ body.on-dark #brandbar .dk{display:none} body:not(.on-dark) #brandbar .wt{displa
     <li><b>Need FDE?</b> Screenly's x86 Max player has a TPM</li>
   </ul>
 </div>
-<aside class="notes"><p><b>1:30</b></p><ul><li>A hacked kiosk is a way into the customer's network</li><li>That's why Screenly's enterprise customers care</li><li>Be upfront: secure boot and FDE need TPM/UEFI hardware, which the Pi 5 doesn't have</li></ul></aside>
+<aside class="notes"><p><b>1:30</b></p><ul><li>Why it matters: a hacked kiosk is a way into the customer's network</li><li>Immutable: read-only root, only signed snaps run</li><li>Confined: every app in its own sandbox</li><li>Signed model assertion: defines what a device is allowed to run</li><li>Secure boot and full disk encryption: need TPM/UEFI hardware</li><li>Be upfront: the Pi 5 has no TPM, so no FDE</li><li>Customers who need FDE: Screenly's x86 Max player has a TPM</li></ul></aside>
 </section>
 
 <!-- 10 OTA -->
@@ -332,7 +332,7 @@ body.on-dark #brandbar .dk{display:none} body:not(.on-dark) #brandbar .wt{displa
   <div class="b soft"><em>3</em>Restart + health check<small>hooks verify the app</small></div><div class="ar">→</div>
   <div class="split2"><div class="b ok">✓ Healthy: commit</div><div class="b bad">✗ Failed: roll back</div></div>
 </div>
-<aside class="notes"><p><b>1:30</b></p><ul><li>New revision installs next to the old one</li><li>Restart, health hooks run, then commit or roll back automatically</li><li>At Screenly's scale OTA has been rock solid</li><li>Only failures we've seen: dead SD cards and full disks</li><li>Compare the Puppet era: a pulled plug meant a bricked screen</li></ul></aside>
+<aside class="notes"><p><b>1:30</b></p><ul><li>Kernel, OS and apps update independently</li><li>Refresh windows and holds: you decide when updates land</li><li>Validation sets pin a known-good set of snaps</li><li>Deltas keep downloads small on slow links</li><li>The flow: new revision installs next to the old one, restart, health hooks run, then commit or roll back</li><li>At Screenly's scale it's been rock solid; only failures were dead SD cards and full disks</li><li>Compare the Puppet era: a pulled plug meant a bricked screen</li></ul></aside>
 </section>
 
 <!-- 11 FLEET -->
@@ -349,7 +349,7 @@ body.on-dark #brandbar .dk{display:none} body:not(.on-dark) #brandbar .wt{displa
   <div class="b hw fleet"><span>🖥️🖥️🖥️🖥️🖥️🖥️<br>🖥️🖥️🖥️🖥️🖥️🖥️</span><small>10,000 devices</small></div><div class="ar">⇄</div>
   <div class="b soft">Fleet view<small>no SSH, no site visits</small></div>
 </div>
-<aside class="notes"><p><b>1:00</b></p><ul><li>At 10,000 devices, logging into one means the system has failed</li><li>Provisioning, updates and recovery all happen from the fleet side</li></ul></aside>
+<aside class="notes"><p><b>1:00</b></p><ul><li>At 10,000 devices, logging into one means the system has failed</li><li>Zero-touch: flash, power on, it runs</li><li>Your model assertion + a Brand Store decide what ships, with staged rollouts and validation sets</li><li>Landscape, or your own heartbeat snap, for inventory and remote actions</li><li>Provisioning, updates and recovery all happen from the fleet side</li></ul></aside>
 </section>
 
 <!-- 12 PROVISIONING -->
@@ -363,7 +363,7 @@ body.on-dark #brandbar .dk{display:none} body:not(.on-dark) #brandbar .wt{displa
   <div class="b ok"><em>✓</em>It's cattle now<small>content + signed OTA arrive</small></div>
 </div>
 <p class="callout">One image + a claim code + state in the cloud = replace, don't repair</p>
-<aside class="notes"><p><b>1:00</b></p><ul><li>Same signed image on every player; nothing configured per device at the factory</li><li>First boot: joins the network, shows a pairing code</li><li>8 lowercase characters, look-alikes (0, 1, i, l, o) removed, valid for 30 days</li><li>Installer types it in the dashboard; content, settings and updates follow</li><li>Dead card = reflash and re-pair</li><li>Source: Screenly docs (pairing codes, boot and pair)</li></ul></aside>
+<aside class="notes"><p><b>1:00</b></p><ul><li>Same signed image on every player; nothing configured per device at the factory</li><li>First boot: joins the network, shows a pairing code</li><li>8 lowercase characters, look-alikes (0, 1, i, l, o) removed, valid for 30 days</li><li>Installer types it in the dashboard; content, settings and updates follow</li><li>Dead card = reflash and re-pair</li></ul></aside>
 </section>
 
 <!-- 13b BRIDGE TO PHYSICAL AI -->
@@ -390,7 +390,7 @@ body.on-dark #brandbar .dk{display:none} body:not(.on-dark) #brandbar .wt{displa
     <li><b>Why Ubuntu Core:</b> when AI controls a machine, a bad update is a safety problem</li>
   </ul>
 </div>
-<aside class="notes"><p><b>1:30</b></p><ul><li><b>Don't skip this one</b></li><li>Physical AI: machines that sense, decide and act in the real world (Gartner top 10 for 2026)</li><li>Only works at the edge</li><li>Once a model can open a lock or move a motor, confinement and rollback stop being nice-to-haves</li><li>Everything we just covered is what makes this safe to ship</li></ul></aside>
+<aside class="notes"><p><b>1:30</b></p><ul><li><b>Don't skip this one</b></li><li>What: machines that sense, decide and act in the real world (Gartner top 10 for 2026)</li><li>Why now: good vision models plus cheap edge hardware</li><li>Why the edge: low latency, privacy, works offline</li><li>Why Ubuntu Core: once a model can open a lock or move a motor, a bad update is a safety problem</li><li>Everything we just covered is what makes this safe to ship</li></ul></aside>
 </section>
 
 <!-- 14b FACTORY EXAMPLE -->
@@ -486,15 +486,9 @@ body.on-dark #brandbar .dk{display:none} body:not(.on-dark) #brandbar .wt{displa
 
 <!-- 17 TIPS -->
 <section>
-<h2>Start Monday: 5 tips to go beyond the breadboard</h2>
-<ol class="tips">
-  <li>Package as a snap from week one</li>
-  <li>Declare hardware with interfaces, never root</li>
-  <li>Rehearse revert and recovery before you need them</li>
-  <li>Own your model assertion: the image is the product</li>
-  <li>Industrial SD cards; plan for 2 to 3 years of life</li>
-</ol>
-<aside class="notes"><p><b>0:45</b></p><ul><li>Run through the five quickly</li><li>They're on the learning path too</li></ul></aside>
+<h2>Start Monday: 5 steps beyond the breadboard</h2>
+<ol class="tips"><li><div><b>Package as a snap from week one</b><small><code>snapcraft init</code>, with strict confinement on from the start</small></div></li><li><div><b>Declare hardware with interfaces, never root</b><small><code>plugs: [camera, gpio]</code> then <code>snap connect</code></small></div></li><li><div><b>Rehearse revert and recovery before you need them</b><small><code>snap revert my-app</code>, and pull the plug mid-update on purpose</small></div></li><li><div><b>Own your model assertion: the image is the product</b><small><code>ubuntu-image</code> builds the same signed image in CI</small></div></li><li><div><b>Use industrial SD cards; plan for 2 to 3 years of life</b><small>Or NVMe / eMMC when the device writes all day</small></div></li></ol>
+<aside class="notes"><p><b>0:45</b></p><ul><li>Run through the five quickly; the commands are on the slide</li><li>They're on the learning path too</li></ul></aside>
 </section>
 
 <!-- 18 THANKS -->
