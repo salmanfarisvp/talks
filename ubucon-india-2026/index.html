@@ -102,7 +102,7 @@ table.cmp td{background:var(--soft);border-radius:12px;padding:13px 12px;text-al
 table.cmp td:first-child{background:none;text-align:right;font-weight:700;color:var(--ink);width:160px}
 table.cmp td.hl{background:#FFEDE5;border:3px solid var(--o);color:var(--ink);font-weight:700}
 ol.tips{list-style:none;padding:0;counter-reset:t;display:grid;gap:18px}
-ol.tips li{counter-increment:t;display:flex;align-items:center;gap:28px;background:var(--soft);border-radius:22px;padding:16px 36px;font-size:40px;margin:0}.tips li div{display:flex;flex-direction:column;gap:6px}.tips li b{font-weight:700}.tips li small{font-size:28px;color:var(--mut)}.tips li small code{font-size:.9em}
+ol.tips li{counter-increment:t;display:flex;align-items:center;gap:28px;background:var(--soft);border-radius:22px;padding:16px 36px;font-size:40px;margin:0}.tips li div{display:flex;flex-direction:column;gap:6px}.tips li b{font-weight:700}.tips li small{font-size:28px;color:var(--mut)}.tips li small code{font-size:.9em}.ei{display:grid;grid-template-columns:700px 1fr;gap:70px;align-items:center;margin-top:-30px}.eiloop{width:700px;height:700px;display:block}.eiwhy{display:grid;gap:18px}.eiwhy .card{padding:20px 30px}.eiwhy .card h3{margin:0 0 6px;font-size:36px}.eiwhy .card p{margin:0;font-size:28px;line-height:1.35}
 ol.tips li::before{content:counter(t);flex:none;width:64px;height:64px;border-radius:50%;background:var(--o);color:#fff;font-weight:700;display:flex;align-items:center;justify-content:center}
 /* dark / split */
 .reveal section.dark{background:radial-gradient(120% 120% at 80% 100%,#7b3fbf 0%,#2c001e 55%,#14000e 100%);color:#fff}
@@ -424,6 +424,52 @@ body.on-dark #brandbar .dk{display:none} body:not(.on-dark) #brandbar .wt{displa
   </div>
 </div>
 <aside class="notes"><p><b>1:00</b></p><ul><li>Model: collect, label and train in Edge Impulse, export one Linux <code>.eim</code> file tuned for the Pi</li><li>Device: impulse-runner, my open source confined snap; runs any Edge Impulse model on Core 22/24</li><li>New model = signed snap update, staged across the fleet, with rollback</li><li>For a product: bundle impulse-runner + your model into your own snap</li><li>edge-vision-core: the demo kit with setup steps</li><li>Try it: <code>sudo snap install impulse-runner</code></li><li>Community project, not affiliated with Edge Impulse</li></ul></aside>
+</section>
+
+<!-- 15b EDGE IMPULSE LIFECYCLE -->
+<section>
+<h2>Edge Impulse: the ML lifecycle in one place</h2>
+<div class="ei">
+<svg class="eiloop" viewBox="0 0 760 760" xmlns="http://www.w3.org/2000/svg" font-family="Ubuntu, sans-serif">
+<defs><marker id="eiarr" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#E95420"/></marker></defs>
+<path d="M477.7 96.3 A300 300 0 0 1 576.8 153.6" fill="none" stroke="#E95420" stroke-width="5" marker-end="url(#eiarr)"/>
+<path d="M674.5 322.8 A300 300 0 0 1 674.5 437.2" fill="none" stroke="#E95420" stroke-width="5" marker-end="url(#eiarr)"/>
+<path d="M576.8 606.4 A300 300 0 0 1 477.7 663.7" fill="none" stroke="#E95420" stroke-width="5" marker-end="url(#eiarr)"/>
+<path d="M282.3 663.7 A300 300 0 0 1 183.2 606.4" fill="none" stroke="#E95420" stroke-width="5" marker-end="url(#eiarr)"/>
+<path d="M85.5 437.2 A300 300 0 0 1 85.5 322.8" fill="none" stroke="#E95420" stroke-width="5" marker-end="url(#eiarr)"/>
+<path d="M183.2 153.6 A300 300 0 0 1 282.3 96.3" fill="none" stroke="#E95420" stroke-width="5" stroke-dasharray="10 8" marker-end="url(#eiarr)"/>
+<circle cx="380" cy="380" r="150" fill="#FBDDD2"/>
+<text x="380" y="358" text-anchor="middle" font-size="34" font-weight="700" fill="#1d1d1d">Edge Impulse</text>
+<text x="380" y="398" text-anchor="middle" font-size="34" font-weight="700" fill="#1d1d1d">Studio</text>
+<text x="380" y="442" text-anchor="middle" font-size="22" fill="#772953">web UI · API · Python SDK</text>
+<rect x="267.0" y="32.0" width="226" height="96" rx="20" fill="#F6F1EE"/>
+<text x="380.0" y="74.0" text-anchor="middle" font-size="30" font-weight="700" fill="#1d1d1d">1  Collect</text>
+<text x="380.0" y="108.0" text-anchor="middle" font-size="20" fill="#5b5b5b">phone or Pi camera</text>
+<rect x="526.8" y="182.0" width="226" height="96" rx="20" fill="#F6F1EE"/>
+<text x="639.8" y="224.0" text-anchor="middle" font-size="30" font-weight="700" fill="#1d1d1d">2  Label</text>
+<text x="639.8" y="258.0" text-anchor="middle" font-size="20" fill="#5b5b5b">AI-assisted labelling</text>
+<rect x="526.8" y="482.0" width="226" height="96" rx="20" fill="#F6F1EE"/>
+<text x="639.8" y="524.0" text-anchor="middle" font-size="30" font-weight="700" fill="#1d1d1d">3  Design</text>
+<text x="639.8" y="558.0" text-anchor="middle" font-size="20" fill="#5b5b5b">DSP + learning blocks</text>
+<rect x="267.0" y="632.0" width="226" height="96" rx="20" fill="#F6F1EE"/>
+<text x="380.0" y="674.0" text-anchor="middle" font-size="30" font-weight="700" fill="#1d1d1d">4  Train + tune</text>
+<text x="380.0" y="708.0" text-anchor="middle" font-size="20" fill="#5b5b5b">EON Tuner (AutoML)</text>
+<rect x="7.2" y="482.0" width="226" height="96" rx="20" fill="#F6F1EE"/>
+<text x="120.2" y="524.0" text-anchor="middle" font-size="30" font-weight="700" fill="#1d1d1d">5  Test</text>
+<text x="120.2" y="558.0" text-anchor="middle" font-size="20" fill="#5b5b5b">live on the Pi</text>
+<rect x="7.2" y="182.0" width="226" height="96" rx="20" fill="#E95420"/>
+<text x="120.2" y="224.0" text-anchor="middle" font-size="30" font-weight="700" fill="#fff">6  Deploy</text>
+<text x="120.2" y="258.0" text-anchor="middle" font-size="20" fill="#FFE3D8">.eim to impulse-runner</text>
+<text x="224.0" y="106.2" text-anchor="end" font-size="22" font-style="italic" fill="#772953">field data → retrain</text>
+</svg>
+<div class="eiwhy">
+  <div class="card soft"><h3>🧩 Easy to start</h3><p>Raw data to a trained model in your browser. No ML expertise needed.</p></div>
+  <div class="card soft"><h3>📏 Hardware-aware</h3><p>Shows latency, RAM and flash for your target before you deploy.</p></div>
+  <div class="card soft"><h3>🔁 MLOps built in</h3><p>One project for data, experiments and deploys. Scriptable via API + SDK.</p></div>
+  <div class="card accent"><h3>📦 One file out</h3><p>A Linux <code>.eim</code> holds DSP + model. It ships as a signed snap update.</p></div>
+</div>
+</div>
+<aside class="notes"><p><b>1:00</b></p><ul><li>This is the model side of the previous slide, as a loop</li><li>Collect: images from a phone or straight from the Pi camera</li><li>Label: AI-assisted labelling saves hours on object detection</li><li>Design the impulse: input, DSP and learning blocks</li><li>Train + tune: the EON Tuner tries block combinations for you</li><li>Test: model testing, then live classification on the Pi</li><li>Deploy: one Linux <code>.eim</code> file, shipped inside impulse-runner as a snap update</li><li>Then loop: new data from the field, retrain, ship again</li><li>Why I use it: easy to start, shows if a model fits the Pi before I deploy, and the API makes the MLOps loop scriptable</li></ul></aside>
 </section>
 
 <!-- 16 LIVE DEMO -->
