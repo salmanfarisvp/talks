@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Talks · Salman Faris</title>
+<meta name="description" content="Slides, demos and links from conference talks by Salman Faris.">
+<style>
+  :root {
+    --bg: #ffffff; --fg: #1d1d1f; --muted: #6b6b70; --line: #e6e6e9;
+    --accent: #e95420; --card: #fafafa;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #141416; --fg: #ececee; --muted: #9a9aa2; --line: #2a2a2e; --accent: #ff7a45; --card: #1b1b1e; }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--fg);
+    font: 16px/1.6 Ubuntu, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  }
+  main { max-width: 720px; margin: 0 auto; padding: 64px 20px 48px; }
+  header a { color: var(--muted); text-decoration: none; font-size: 14px; }
+  header a:hover { color: var(--accent); }
+  h1 { font-size: 34px; line-height: 1.2; margin: 16px 0 8px; letter-spacing: -0.01em; }
+  .intro { color: var(--muted); margin: 0 0 40px; }
+  .year { font-size: 13px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); margin: 0 0 12px; }
+  .talk { border: 1px solid var(--line); background: var(--card); border-radius: 12px; padding: 20px 22px; margin-bottom: 16px; }
+  .meta { font-size: 14px; color: var(--muted); margin: 0 0 4px; }
+  .meta a { color: inherit; }
+  .talk h2 { font-size: 20px; line-height: 1.35; margin: 0 0 14px; }
+  .talk h2 a { color: var(--fg); text-decoration: none; }
+  .talk h2 a:hover { color: var(--accent); }
+  .links { display: flex; flex-wrap: wrap; gap: 8px 18px; margin: 0; padding: 0; list-style: none; font-size: 15px; }
+  .links a { color: var(--accent); text-decoration: none; }
+  .links a:hover { text-decoration: underline; }
+  footer { margin-top: 48px; padding-top: 20px; border-top: 1px solid var(--line); font-size: 14px; color: var(--muted); }
+  footer a { color: inherit; }
+</style>
+</head>
+<body>
+<main>
+  <header><a href="https://salmanfarisvp.com/">← salmanfarisvp.com</a></header>
+  <h1>Talks</h1>
+  <p class="intro">Slides, demos and links from my conference talks.</p>
+
+  <p class="year">2026</p>
+  <article class="talk">
+    <p class="meta">Nov 2026 · <a href="https://events.canonical.com/event/157/contributions/1079/">UbuCon India 2026</a></p>
+    <h2><a href="2026-11-ubucon-india/">Beyond the Breadboard: Scaling Raspberry Pi Projects to the Edge with Ubuntu Core</a></h2>
+    <ul class="links">
+      <li><a href="2026-11-ubucon-india/">Slides</a></li>
+      <li><a href="https://events.canonical.com/event/157/contributions/1079/">Event page</a></li>
+      <li><a href="https://github.com/salmanfarisvp/impulse-runner">impulse-runner</a></li>
+      <li><a href="https://github.com/salmanfarisvp/edge-vision-core">edge-vision-core</a></li>
+    </ul>
+  </article>
+
+  <footer>Slides are single offline HTML files: arrow keys to move, <b>S</b> for speaker notes, <b>F</b> for full screen. Source on <a href="https://github.com/salmanfarisvp/talks">GitHub</a>.</footer>
+</main>
+</body>
+</html>

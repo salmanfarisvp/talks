@@ -366,16 +366,6 @@ body.on-dark #brandbar .dk{display:none} body:not(.on-dark) #brandbar .wt{displa
 <aside class="notes">1:00. Every player gets the same signed image, so the factory configures nothing per device. First boot joins the network, then shows a pairing code: 8 lowercase characters with look-alikes like 0, 1, i, l, o removed, valid 30 days. The installer types it in the dashboard; content, settings and signed updates arrive on their own. A dead card is just reflash and re-pair. (Source: Screenly docs, pairing codes and boot-and-pair.)</aside>
 </section>
 
-<!-- 13 SNAPS OR CONTAINERS -->
-<section data-state="optional">
-<h2>Snaps or containers? Both run on Ubuntu Core</h2>
-<div class="two">
-  <div class="card accent"><h3>Snaps</h3><ul><li>Atomic updates + rollback</li><li>Strict confinement per app</li><li>Hardware via interfaces</li><li>Best for: devices, agents, AI</li></ul></div>
-  <div class="card purple"><h3>Containers</h3><ul><li>Run images unchanged</li><li>Keep your cloud CI/CD</li><li>Docker itself is a snap</li><li>Best for: porting cloud apps</li></ul></div>
-</div>
-<aside class="notes">1:00. SKIP if past time. You don't have to choose: sudo snap install docker gives containers on Ubuntu Core, managed like any other snap.</aside>
-</section>
-
 <!-- 13b BRIDGE TO PHYSICAL AI -->
 <section class="dark bridge">
 <div class="bigline"><span>10,000+</span> screens today</div>
@@ -491,7 +481,7 @@ body.on-dark #brandbar .dk{display:none} body:not(.on-dark) #brandbar .wt{displa
     <div class="b soft">🔄 <b>Ship</b><small>new model = signed snap update, with rollback</small></div>
   </div>
 </div>
-<aside class="notes">2:30. LIVE DEMO, hard cap 2 min. The picture on the left is the factory version of this idea: the same pipeline with a model trained on hi-vis vests. Live, I\'ll run person detection: walk into the frame and the Pi draws a box and updates the people count, full screen with Ubuntu Frame. It\'s an Edge Impulse model running on the Pi 5 CPU inside the impulse-runner snap. To get the vest version you collect and label vest images in Edge Impulse, retrain and ship the new model as a signed snap update; nothing else changes. Fallback: recorded clip.</aside>
+<aside class="notes">2:30. LIVE DEMO, hard cap 2 min. The picture on the left is the factory version of this idea: the same pipeline with a model trained on hi-vis vests. Live, I'll run person detection: walk into the frame and the Pi draws a box and updates the people count, full screen with Ubuntu Frame. It's an Edge Impulse model running on the Pi 5 CPU inside the impulse-runner snap. To get the vest version you collect and label vest images in Edge Impulse, retrain and ship the new model as a signed snap update; nothing else changes. Fallback: recorded clip.</aside>
 </section>
 
 <!-- 17 TIPS -->
