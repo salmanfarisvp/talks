@@ -8,7 +8,7 @@ Slide decks, demos and assets from my conference talks. Write-ups live on my blo
 
 ## Using the slides
 
-Each talk is a single offline HTML file built with reveal.js. Use the arrow keys to move between slides, press `S` for speaker notes and `F` for full screen.
+Each talk is a single offline HTML file built with reveal.js. Use the arrow keys to move between slides and press `F` for full screen.
 
 ## Projects from the talks
 
