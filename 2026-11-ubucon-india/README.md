@@ -2,6 +2,7 @@
 
 UbuCon India 2026, Salman Faris (Community @ Screenly)
 
-- Slides: https://salmanfarisvp.github.io/talks/2026-11-ubucon-india/
+- Talk on the UbuCon India 2026 schedule: https://events.canonical.com/event/157/contributions/1079/
+- Slides: https://salmanfarisvp.com/talks/2026-11-ubucon-india/
 - impulse-runner: https://github.com/salmanfarisvp/impulse-runner
 - edge-vision-core: https://github.com/salmanfarisvp/edge-vision-core

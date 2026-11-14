@@ -4,7 +4,7 @@ Slide decks, demos and assets from my conference talks. Write-ups live on my blo
 
 | Date | Event | Talk | Slides |
 |------|-------|------|--------|
-| Nov 2026 | UbuCon India 2026 | Beyond the Breadboard: Scaling Raspberry Pi Projects to the Edge with Ubuntu Core | [View](https://salmanfarisvp.github.io/talks/2026-11-ubucon-india/) |
+| Nov 2026 | [UbuCon India 2026](https://events.canonical.com/event/157/contributions/1079/) | Beyond the Breadboard: Scaling Raspberry Pi Projects to the Edge with Ubuntu Core | [View](https://salmanfarisvp.com/talks/2026-11-ubucon-india/) |
 
 ## Using the slides
 
