@@ -273,14 +273,14 @@ body.on-dark #brandbar .dk{display:none} body:not(.on-dark) #brandbar .wt{displa
 <section>
 <h2>Field-ready hardware: what breaks first</h2>
 <div class="grid3">
-  <div class="card accent"><h3>💾 Storage fails first</h3><p>Industrial-grade SD, 16 GB+, Class 10+. Endurance beats capacity.</p></div>
+  <div class="card accent"><h3>💾 Storage fails first</h3><p>Industrial-grade SD, 16 GB+, Class 10+. Screenly Player Max (x86) uses NVMe; CM4 and CM5 have built-in eMMC.</p></div>
   <div class="card soft"><h3>⏳ Plan the lifespan</h3><p>Even good cards last ~2 to 3 years under 24/7 writes.</p></div>
   <div class="card soft"><h3>🚀 Better storage</h3><p>Pi 5 + NVMe HAT, or eMMC on a Compute Module.</p></div>
   <div class="card soft"><h3>🔌 Clean power</h3><p>Official 27 W supply on Pi 5. Brownouts corrupt storage.</p></div>
   <div class="card soft"><h3>🌡️ Heat</h3><p>Screens live in hot ceilings and kiosks. Use a heatsink or cooler.</p></div>
   <div class="card soft"><h3>🔐 Know the limits</h3><p>No TPM on the Pi; RTC needs a battery. High security: x86 + TPM.</p></div>
 </div>
-<aside class="notes"><p><b>1:00</b></p><ul><li>Cattle need the right hardware; storage fails first</li><li>Screenly ships SanDisk Industrial SD cards: players write 24/7, consumer cards can die in months</li><li>Even good cards last 2 to 3 years, so plan replacements; one site visit costs more than the card</li><li>Better: Pi 5 with an NVMe HAT, or eMMC on a Compute Module</li><li>Official 27 W supply on the Pi 5; brownouts corrupt storage</li><li>Ceilings and kiosks get hot: heatsink or active cooler</li><li>No TPM, RTC needs a battery: for high security, go x86 with a TPM</li><li>Card died anyway? Reflash, re-pair, content comes back because state lives in the cloud</li></ul></aside>
+<aside class="notes"><p><b>1:00</b></p><ul><li>Cattle need the right hardware; storage fails first</li><li>Screenly ships SanDisk Industrial SD cards: players write 24/7, consumer cards can die in months</li><li>Our x86 Screenly Player Max ships with NVMe, and we also support CM4 and CM5 with built-in eMMC: no SD card to wear out</li><li>Even good cards last 2 to 3 years, so plan replacements; one site visit costs more than the card</li><li>Better: Pi 5 with an NVMe HAT, or eMMC on a Compute Module</li><li>Official 27 W supply on the Pi 5; brownouts corrupt storage</li><li>Ceilings and kiosks get hot: heatsink or active cooler</li><li>No TPM, RTC needs a battery: for high security, go x86 with a TPM</li><li>Card died anyway? Reflash, re-pair, content comes back because state lives in the cloud</li></ul></aside>
 </section>
 
 <!-- 8 HARDWARE ACCESS -->
@@ -527,7 +527,14 @@ body.on-dark #brandbar .dk{display:none} body:not(.on-dark) #brandbar .wt{displa
     <div class="b soft">🔄 <b>Ship</b><small>new model = signed snap update, with rollback</small></div>
   </div>
 </div>
-<aside class="notes"><p><b>2:30</b></p><ul><li><b>Hard cap: 2 minutes</b></li><li>Left picture: the factory version, same pipeline trained on hi-vis vests</li><li>Live: walk into frame, Pi draws a box, people count updates, full screen via Ubuntu Frame</li><li>Edge Impulse model on the Pi 5 CPU, inside impulse-runner</li><li>Vest version: label vest images, retrain, ship as a signed snap update; nothing else changes</li><li>If the demo fails: play the recorded clip</li></ul></aside>
+<aside class="notes"><p><b>2:30</b></p><ul><li><b>Hard cap: 2 minutes</b></li><li>Left picture: the factory version, same pipeline trained on hi-vis vests</li><li>Live: walk into frame, Pi draws a box, people count updates, full screen via Ubuntu Frame</li><li>Edge Impulse model on the Pi 5 CPU, inside impulse-runner</li><li>Vest version: label vest images, retrain, ship as a signed snap update; nothing else changes</li><li>If the demo fails: go to the next slide and play the recorded clip</li></ul></aside>
+</section>
+
+<!-- 16b DEMO BACKUP (recorded) -->
+<section>
+<h2>Demo, recorded: impulse-runner on a Raspberry Pi 5</h2>
+<video class="r-stretch" src="assets/demo.mp4" controls muted playsinline preload="auto" style="display:block;margin:0 auto;border-radius:12px;background:#000"></video>
+<aside class="notes"><p><b>Backup</b></p><ul><li>Only if the live demo failed; otherwise skip this slide</li><li>Click play: 24 s clip of impulse-runner detecting a person and a cell phone on the Pi 5</li><li>Point at the side panel: CPU, temperature and ~64 ms inference, all on the Pi</li></ul></aside>
 </section>
 
 <!-- 17 TIPS -->
